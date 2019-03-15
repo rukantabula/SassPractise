@@ -9,6 +9,7 @@ $color-text: #343434;
 $color-bg: #3acec2;
 $color-bg-light: #009fe1;
 
+
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Bree Serif', serif;
 
@@ -38,6 +39,21 @@ ul {
   margin: 0;
 }
 
+p {
+  margin-bottom: 1.25em;
+  .intro & {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 
 header {
@@ -46,20 +62,21 @@ header {
               url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+
+  h1 {
+    color: $white;
+    font-size: 4.8em;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: $color-accent;
+    font-size: 1.25em;
+    margin: 0;
+  }
 }
 
-header h1 {
-  color: $white;
-  font-size: 4.8em;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-}
-
-header p {
-  color: $color-accent;
-  font-size: 1.25em;
-  margin: 0;
-}
 
 footer {
   padding: 2em 0 0;
@@ -83,6 +100,20 @@ footer {
 
 .main-nav {
   margin-top: 1em;
+  li {
+    display: inline-block;
+    margin: 0 0.65em;
+  }
+  a{
+    color: $white;
+    font-size: .85em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5em;
+    &:hover {
+      color: $color-accent;
+    }
+  }
 }
 
 .card {
@@ -91,25 +122,35 @@ footer {
   padding: 1.5em 1em;
   border: 1px solid $color-shade;
   border-radius: .25em;
+  h1 {
+    margin: 0.35em 0 0;
+    line-height: 1.25;
+  }
+  .icon,
+  h1 {
+    color: $color-primary;
+  }
 }
 
-.card h1 {
-  color: $color-primary; 
-  margin: 0.35em 0 0;
-  line-height: 1.25;
-}
 
-.btn-info {
+
+.btn {
   color: $white;
   display: inline-block;
-  font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  background-color: $color-primary;  
-  margin-top: auto;
+  &-callout {
+    font-size: 1.1em;
+    background-color: $color-secondary
+  }
+  &-info {
+    font-size: 0.85em;
+    background-color: $color-primary;  
+    margin-top: auto;
+  }
 }
 
 
