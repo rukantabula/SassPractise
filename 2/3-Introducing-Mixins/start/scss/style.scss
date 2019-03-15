@@ -14,6 +14,25 @@ $color-bg-light: #009fe1;
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Bree Serif', serif;
 
+$max-width: 1000px;
+
+/*Mixins-----------------------*/
+@mixin skewed {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px; 
+  position: absolute;
+  transform: skewY(-2deg);
+}
+
+@mixin center {
+  width: 90%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* BASE ------------------------------------------- */
 
 * {
@@ -74,13 +93,8 @@ header {
     font-size: 1.25em;
     margin: 0;
   }
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 50px; 
-    position: absolute;
-    transform: skewY(-2deg);
+  &::after {   
+    @include skewed;
     background-color: $white;
     bottom: -25px;
   } 
@@ -94,16 +108,12 @@ footer {
   margin-top: 3.5em;
   position: relative; 
   &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 50px; 
-    position: absolute;
-    transform: skewY(-2deg);
+    @include skewed;
     background-color: $color-shade;
     top: -25px;
   } 
 }
+
 
 /* CONTAINERS ------------------------------------- */
 
@@ -208,9 +218,7 @@ footer {
 
 @media (min-width: 768px) {
   .main-content {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    @include center;
   }
 }
 
