@@ -1,7 +1,6 @@
 // ======================================
 //  Image Styles
 // ======================================
-
 .img-featured {
   width: 165px;
   border: 4px solid $white; 
@@ -9,10 +8,8 @@
   margin-top: 75px;
   position: relative;
   z-index: 100;
-}
-
-@media (max-width: 575px) {
-  .img-featured {
+  
+@media (max-width: $break-xs) {
     display: none;
-  }
+}
 }
