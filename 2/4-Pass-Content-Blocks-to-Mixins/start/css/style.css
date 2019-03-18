@@ -35,8 +35,7 @@ header {
   height: 460px;
   background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
-  background-size: cover;
-  position: relative; }
+  background-size: cover; }
   header h1 {
     color: #fff;
     font-size: 4.8em;
@@ -47,6 +46,7 @@ header {
     font-size: 1.25em;
     margin: 0; }
   header::after {
+    position: relative;
     content: '';
     display: block;
     width: 100%;
@@ -60,9 +60,9 @@ footer {
   padding: 2em 0 0;
   height: 100px;
   background-color: #eee;
-  margin-top: 3.5em;
-  position: relative; }
-  footer::before {
+  margin-top: 3.5em; }
+  footer::after {
+    position: relative;
     content: '';
     display: block;
     width: 100%;
@@ -117,7 +117,7 @@ footer {
   .card h1 {
     color: #278da4; }
 
-.btn {
+.btn-callout, .btn-info {
   color: #fff;
   display: inline-block;
   font-weight: bold;
@@ -125,13 +125,19 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em; }
-  .btn-callout {
-    font-size: 1.1em;
-    background-color: #b13c69; }
-  .btn-info {
-    font-size: 0.85em;
-    background-color: #278da4;
-    margin-top: auto; }
+  .btn-callout:hover, .btn-info:hover {
+    color: #fff;
+    opacity: 0.8; }
+  .btn-callout:active, .btn-info:active {
+    opacity: initial; }
+
+.btn-callout {
+  font-size: 1.1em;
+  background-color: #b13c69; }
+.btn-info {
+  font-size: 0.85em;
+  background-color: #278da4;
+  margin-top: auto; }
 
 /* MEDIA QUERIES ---------------------------------- */
 @media (max-width: 575px) {
