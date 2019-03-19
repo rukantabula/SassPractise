@@ -436,7 +436,28 @@ a {
 
 .main-content {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/ }
   @media (min-width: 768px) {
     .main-content {
       width: 90%;
@@ -449,7 +470,28 @@ a {
 
 .intro {
   margin: auto;
-  padding: 1em 1em 3em; }
+  padding: 1em 1em 3em;
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/ }
   .intro p {
     font-size: 1.2em; }
   @media (min-width: 992px) {
@@ -461,7 +503,49 @@ header {
   height: 460px;
   background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
-  background-size: cover; }
+  background-size: cover;
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/ }
   header::after {
     content: '';
     display: block;
@@ -475,7 +559,28 @@ header {
     color: #fff;
     font-size: 4.8em;
     margin-bottom: 0;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    /*
+    @if $break == 'xs' {
+      @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+        @content;
+      }
+    }
+    @else if $break == 'sm' {
+      @media (max-width: $break-s){
+        @content;
+      }
+    }
+    @else if $break == 'med' {
+      @media (max-width: $break-m){
+        @content;
+      }
+    }
+    @else if $break == 'lg' {
+      @media (max-width: $break-l){
+        @content;
+      }
+    }*/ }
     @media (max-width: 575px) {
       header h1 {
         font-size: 3.4em; } }
@@ -496,7 +601,49 @@ header {
   padding: 1.5em 1em;
   border: 1px solid #eee;
   border-radius: 0.25em;
-  margin: 10px; }
+  margin: 10px;
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/ }
   .card h1 {
     color: #278da4;
     margin: 0.35em 0 0;
@@ -506,7 +653,7 @@ header {
       flex: 1 46%; } }
   @media (min-width: 992px) {
     .card {
-      flex-basis: 27.33333%; } }
+      flex-basis: 27.3333333333%; } }
 
 footer {
   padding: 2em 0 0;
@@ -573,7 +720,28 @@ footer {
   border-radius: 50%;
   margin-top: 75px;
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/ }
   @media (max-width: 575px) {
     .img-featured {
       display: none; } }

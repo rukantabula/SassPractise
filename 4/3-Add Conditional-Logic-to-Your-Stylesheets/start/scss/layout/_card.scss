@@ -13,10 +13,10 @@
     margin: 0.35em 0 0;
     line-height: 1.25;
   }
-  @media (min-width: $break-s) {
+  @include mq('sm') {
     flex: 1 per-line(2);
   }
-  @media (min-width: $break-l) {
+  @include mq('lg') {
     flex-basis: per-line(3);
   }
 }

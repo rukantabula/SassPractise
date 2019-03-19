@@ -44,6 +44,47 @@
   justify-content: $just;
 }
 
+// media queries
+
+@mixin mq ($break) {
+  $value: map-get($map: $breakpoints, $key: $break);
+  $sm: map-get($map: $breakpoints, $key: 'sm');
+  
+  @if $value < $sm {
+    @media (max-width : $value){
+      @content;
+    }
+  } 
+
+  @else {
+    @media (min-width : $value){
+      @content;
+    }
+  }
+
+  /*
+  @if $break == 'xs' {
+    @media (max-width :map-get($map: $breakpoints, $key: 'xs')){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media (max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media (max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media (max-width: $break-l){
+      @content;
+    }
+  }*/
+}
+
 
 
 
